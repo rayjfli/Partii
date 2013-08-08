@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Partii_Study</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="userName">User Name</string>
+    <string name="login_name">User Name</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="login_regButton">Register</string>
+    <string name="login_output">Output Here!</string>
+
+</resources>

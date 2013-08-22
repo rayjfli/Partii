@@ -1,5 +1,7 @@
 package com.example.partii_study;
 
+import java.util.concurrent.ExecutionException;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -29,7 +31,34 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				output.setText("hi");
+				try {
+					output.setText(new Partii_Post().execute("login").get());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		});
+		
+		logButton.setOnClickListener(new Button.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				try {
+					output.setText(new Partii_Post().execute("").get());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
 			}
 			
 		});
